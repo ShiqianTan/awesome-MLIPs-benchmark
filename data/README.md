@@ -14,9 +14,9 @@ This repository focuses on **how atomistic potentials are evaluated**, especiall
 - **77 Core resources** directly benchmark MLIPs, and **56 Supporting resources** provide important datasets, model ecosystems, methodology, or adjacent benchmark infrastructure.
 - [`data/mlips-benchmark-normalized.csv`](data/mlips-benchmark-normalized.csv): canonical query-friendly index.
 - [`data/new-additions-2026-09-29.csv`](data/new-additions-2026-09-29.csv): the 43 additions from the latest sweep.
-- [`SCHEMA.md`](data/SCHEMA.md): field definitions and curation conventions.
-- [`NEW_ADDITIONS.md`](data/NEW_ADDITIONS.md): complete checklist of newly added resources.
-- [`CURATION_REPORT.md`](data/CURATION_REPORT.md): duplicate cleanup, metadata enrichment, and confidence notes.
+- [`SCHEMA.md`](SCHEMA.md): field definitions and curation conventions.
+- [`NEW_ADDITIONS.md`](NEW_ADDITIONS.md): complete checklist of newly added resources.
+- [`CURATION_REPORT.md`](CURATION_REPORT.md): duplicate cleanup, metadata enrichment, and confidence notes.
 
 ## Scope
 
@@ -322,11 +322,11 @@ The normalized CSV is designed for filtering and automated README generation. In
 
 `Scope_Tier`, `Resource_Type`, `Primary_Category`, `System_Class`, `Benchmark_Tasks`, `Models_Evaluated`, `Key_Metrics`, `Reference_Baseline`, `Code_URL`, `Data_URL`, `Peer_Reviewed`, `Open_Source`, `Curation_Confidence`, and `Last_Verified`.
 
-See [`SCHEMA.md`](data/SCHEMA.md) for definitions. The original Zotero export can remain as the rich bibliographic source table; `Original_Zotero_Key` provides traceability from the normalized index back to Zotero.
+See [`SCHEMA.md`](SCHEMA.md) for definitions. The original Zotero export can remain as the rich bibliographic source table; `Original_Zotero_Key` provides traceability from the normalized index back to Zotero.
 
 ## Contributing
 
-Suggestions and pull requests are welcome. See [`CONTRIBUTING.md`](data/CONTRIBUTING.md). A useful contribution should identify **what is benchmarked**, the **system**, **task**, **metrics**, **reference baseline**, and **code/data links** when available. Prefer a peer-reviewed DOI over an older preprint when both exist.
+Suggestions and pull requests are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md). A useful contribution should identify **what is benchmarked**, the **system**, **task**, **metrics**, **reference baseline**, and **code/data links** when available. Prefer a peer-reviewed DOI over an older preprint when both exist.
 
 Benchmark results are task-dependent; this collection intentionally avoids treating one score as a universal ranking of MLIP quality.
 
