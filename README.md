@@ -4,57 +4,48 @@
 ![Records](https://img.shields.io/badge/curated_records-133-blue)
 ![Last verified](https://img.shields.io/badge/last_verified-2026--09--29-green)
 
-> A curated collection of benchmarks, benchmark datasets, evaluation frameworks, and reliability studies for machine-learning interatomic potentials (MLIPs), universal MLIPs (uMLIPs), and atomistic foundation models.
-
-This repository focuses on **how atomistic potentials are evaluated**, especially beyond energy/force MAE: transferability, geometry relaxation, molecular-dynamics stability, phonons and thermal transport, defects, surfaces/interfaces, catalysis, ion transport, experiment-facing observables, computational efficiency, uncertainty, and downstream properties.
+Index of benchmark studies, benchmark datasets, evaluation frameworks, and reliability studies for machine-learning interatomic potentials (MLIPs).
 
 ## Database
 
-- **133 normalized resources**: 90 unique records retained from the original 91-record Zotero export + 43 newly curated resources.
-- **77 Core resources** directly benchmark MLIPs, and **56 Supporting resources** provide important datasets, model ecosystems, methodology, or adjacent benchmark infrastructure.
-- [`data/mlips-benchmark-normalized.csv`](data/mlips-benchmark-normalized.csv): canonical query-friendly index.
-- [`data/new-additions-2026-09-29.csv`](data/new-additions-2026-09-29.csv): the 43 additions from the latest sweep.
-- [`SCHEMA.md`](data/SCHEMA.md): field definitions and curation conventions.
-- [`NEW_ADDITIONS.md`](data/NEW_ADDITIONS.md): complete checklist of newly added resources.
-- [`CURATION_REPORT.md`](data/CURATION_REPORT.md): duplicate cleanup, metadata enrichment, and confidence notes.
-
-## Scope
-
-**Core** resources directly evaluate MLIPs with reusable tasks/metrics, benchmark suites, or application-level validation. **Supporting** resources include major training/evaluation datasets, model papers with unusually broad stress tests, and methodology needed to interpret benchmark reliability. Keeping the two tiers separate avoids treating a training dataset as if it were a leaderboard while retaining the full evaluation ecosystem.
+- **Records:** 133
+- **Core:** 77
+- **Supporting:** 56
+- [Normalized index](data/mlips-benchmark-normalized.csv)
+- [New additions](data/new-additions-2026-09-29.csv)
+- [Schema](data/SCHEMA.md)
+- [New additions checklist](data/NEW_ADDITIONS.md)
+- [Curation report](data/CURATION_REPORT.md)
 
 ## Contents
 
 - [Benchmark map](#benchmark-map)
 - [Core benchmark resources](#core-benchmark-resources)
 - [Supporting resources](#supporting-resources)
-- [Data model](#data-model)
-- [Contributing](#contributing)
 
 ## Benchmark map
 
-| Category | Records | Typical question |
-|---|---:|---|
-| Benchmark suites and platforms | 9 | Can models be compared under a standardized, reusable protocol? |
-| General and foundation MLIP evaluation | 29 | How transferable are general-purpose and foundation potentials? |
-| Dynamics and finite temperature | 4 | Do long trajectories remain stable and physically meaningful? |
-| Phonons, vibrations and thermal | 8 | Are harmonic/anharmonic vibrations and heat transport correct? |
-| Surfaces, interfaces and catalysis | 12 | Do models transfer to under-coordinated, reactive and interfacial environments? |
-| Batteries, diffusion and ion transport | 7 | Are barriers, diffusivities and transport mechanisms correct? |
-| Defects, disorder and dimensionality | 7 | How reliable are models for defects, amorphous phases and reduced-dimensional systems? |
-| Mechanical and elastic properties | 2 | Do stresses and forces yield correct mechanical observables? |
-| Molecules, reactions and chemical kinetics | 10 | Are molecular PESs, reactions and kinetics quantitatively reliable? |
-| MOFs, zeolites and molecular crystals | 5 | Can porous and noncovalent crystals be modeled reliably? |
-| Crystal search, stability and generation | 5 | Do MLIPs preserve energetic ordering during search and discovery? |
-| Thermodynamics and phase diagrams | 1 | Do MLIPs recover finite-temperature phase stability and topology? |
-| Experimental observables | 1 | Do predictions reproduce measured observables? |
-| Downstream electronic properties | 1 | Do structurally accurate predictions preserve downstream electronic properties? |
-| Methodology, reliability and efficiency | 13 | How should errors, UQ, OOD behavior, speed and cost be measured? |
-| Foundation datasets and model ecosystems | 15 | Which datasets and model ecosystems underpin modern MLIP benchmarks? |
-| Broader atomistic ML benchmarks | 4 | Which adjacent atomistic-ML resources inform MLIP evaluation? |
+| Category | Records |
+|---|---:|
+| Benchmark suites and platforms | 9 |
+| General and foundation MLIP evaluation | 29 |
+| Dynamics and finite temperature | 4 |
+| Phonons, vibrations and thermal | 8 |
+| Surfaces, interfaces and catalysis | 12 |
+| Batteries, diffusion and ion transport | 7 |
+| Defects, disorder and dimensionality | 7 |
+| Mechanical and elastic properties | 2 |
+| Molecules, reactions and chemical kinetics | 10 |
+| MOFs, zeolites and molecular crystals | 5 |
+| Crystal search, stability and generation | 5 |
+| Thermodynamics and phase diagrams | 1 |
+| Experimental observables | 1 |
+| Downstream electronic properties | 1 |
+| Methodology, reliability and efficiency | 13 |
+| Foundation datasets and model ecosystems | 15 |
+| Broader atomistic ML benchmarks | 4 |
 
-## Core benchmark resources
-
-The following **77 Core resources** constitute the main awesome list. Entries are grouped by the scientific question they test rather than by model architecture.
+## Core resources (77)
 
 ### Benchmark suites and platforms
 
@@ -186,7 +177,7 @@ The following **77 Core resources** constitute the main awesome list. Entries ar
 
 ## Supporting resources
 
-These **56 Supporting resources** are kept in the same database because benchmark outcomes depend strongly on training-set coverage, reference electronic-structure theory, data infrastructure, and evaluation methodology. They are intentionally labeled separately from direct benchmark studies.
+Supporting resources (56)
 
 <details>
 <summary><strong>Benchmark suites and platforms</strong> (1)</summary>
@@ -316,20 +307,6 @@ These **56 Supporting resources** are kept in the same database because benchmar
 
 </details>
 
-## Data model
-
-The normalized CSV is designed for filtering and automated README generation. In addition to citation identity, every record can store:
-
-`Scope_Tier`, `Resource_Type`, `Primary_Category`, `System_Class`, `Benchmark_Tasks`, `Models_Evaluated`, `Key_Metrics`, `Reference_Baseline`, `Code_URL`, `Data_URL`, `Peer_Reviewed`, `Open_Source`, `Curation_Confidence`, and `Last_Verified`.
-
-See [`SCHEMA.md`](data/SCHEMA.md) for definitions. The original Zotero export can remain as the rich bibliographic source table; `Original_Zotero_Key` provides traceability from the normalized index back to Zotero.
-
-## Contributing
-
-Suggestions and pull requests are welcome. See [`CONTRIBUTING.md`](data/CONTRIBUTING.md). A useful contribution should identify **what is benchmarked**, the **system**, **task**, **metrics**, **reference baseline**, and **code/data links** when available. Prefer a peer-reviewed DOI over an older preprint when both exist.
-
-Benchmark results are task-dependent; this collection intentionally avoids treating one score as a universal ranking of MLIP quality.
-
 ## License
 
-The bibliographic compilation is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Individual papers, datasets, and software retain their own licenses and copyrights.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Individual papers, datasets, and software retain their own licenses and copyrights.
