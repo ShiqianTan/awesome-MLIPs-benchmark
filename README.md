@@ -1,5 +1,7 @@
 # Awesome MLIPs Benchmark
 
+![Awesome MLIPs Benchmark cover](fig/mlip-benchmark-cover.png)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Records](https://img.shields.io/badge/curated_records-133-blue)
 ![Last verified](https://img.shields.io/badge/last_verified-2026--09--29-green)
