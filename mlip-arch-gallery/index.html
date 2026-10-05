@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Matbench Discovery 模型架构图库：53 个模型条目、31 张依据论文内容生成的架构图。">
+  <title>MLIP Architecture Gallery · Matbench Discovery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="gallery.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="回到图库顶部"><span class="brand-mark">M<span>·</span></span><span>MLIP<span class="brand-light"> / ARCH GALLERY</span></span></a>
+      <nav aria-label="主导航"><a href="#gallery">架构图库</a><a href="#models">模型索引</a><a href="#about">关于资料</a><a class="nav-source" href="https://matbench-discovery.materialsproject.org/" target="_blank" rel="noopener noreferrer">Matbench Discovery ↗</a></nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> PAPER-GROUNDED MODEL ATLAS <span class="edition">2026.10 / SNAPSHOT</span></div>
+        <h1 id="hero-title">看见材料模型<br><em>如何工作。</em></h1>
+        <p class="hero-lead">从晶体输入到能量与力的预测，用一张图理解每一种架构。整理 Matbench Discovery 活跃模型、对应论文和去重后的示意图。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#gallery">浏览架构图 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#models">查看全部模型 <span aria-hidden="true">→</span></a></div>
+        <div class="hero-stats" aria-label="图库统计"><div><strong id="model-stat">53</strong><span>模型条目</span></div><div><strong id="figure-stat">31</strong><span>架构图</span></div><div><strong>42</strong><span>有分数的排名</span></div></div>
+      </div>
+      <div class="hero-visual"><span class="visual-label">FEATURED ARCHITECTURE / 01</span><img src="assets/01_Prophet-OAME-MBD.png" alt="Prophet 模型架构示意图" fetchpriority="high"><span class="visual-caption"><span>01 / PROPHET-OAME-MBD</span><span>探索架构的内部逻辑 ↗</span></span></div>
+    </section>
+
+    <section class="overview-band" aria-label="图库说明"><div class="container overview-inner"><div class="overview-symbol">✳</div><p>同一论文、同一架构的模型变体合并展示。每张图都以论文内容为依据生成；没有对应架构论文的条目在模型索引中说明。</p><span>EXPLORE THE ARCHITECTURES <span aria-hidden="true">↓</span></span></div></section>
+
+    <section class="gallery-section container" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><div><div class="section-kicker">01 / ARCHITECTURE COLLECTION</div><h2 id="gallery-title">架构图库</h2><p>按方法浏览，或搜索模型名、论文编号与结构关键词。</p></div><div class="section-count"><span id="visible-figure-count">31</span><small>张架构图</small></div></div>
+      <div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">搜索模型或论文</span><input id="search" type="search" placeholder="搜索模型、方法或 arXiv ID…" autocomplete="off"><kbd>/</kbd></label><div id="family-filters" class="filters" role="group" aria-label="按架构类型筛选"></div></div>
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+      <p id="gallery-empty" class="empty-state" hidden>没有匹配的架构图。试试其他关键词或分类。</p>
+    </section>
+
+    <section class="models-section" id="models" aria-labelledby="models-title"><div class="container"><div class="section-heading"><div><div class="section-kicker">02 / COMPLETE MODEL INDEX</div><h2 id="models-title">模型索引</h2><p>有综合分数的模型按快照排名；缺少 CPS 指标的活跃模型列在最后。</p></div><div class="section-count"><span id="visible-model-count">53</span><small>个模型条目</small></div></div><div class="table-wrap"><table><thead><tr><th scope="col">排名</th><th scope="col">模型</th><th scope="col">CPS</th><th scope="col">论文来源</th><th scope="col">架构图</th></tr></thead><tbody id="model-rows"></tbody></table></div><p class="table-note">“—”表示未找到对应 arXiv 模型论文或缺少默认 CPS 所需指标。榜单为注册表快照，不代表实时名次。</p></div></section>
+
+    <section class="about-section container" id="about" aria-labelledby="about-title"><div class="about-main"><div class="section-kicker">03 / SCOPE & PROVENANCE</div><h2 id="about-title">如何阅读这个图库</h2><p>架构图由图像生成工具依据论文内容制作，呈现主要模块和信息流；训练细节、层数和数学定义请以原论文为准。CGCNN+P 等改变训练流程的模型，图中会明确标出训练分支。</p><p>排名依据 Matbench Discovery 官方模型注册表的 <code>e3d7966</code> 快照与网站默认综合分数公式。页面把有分数的前 42 名和其余 11 个活跃模型一起收录。</p><div class="about-links"><a href="https://github.com/janosh/matbench-discovery" target="_blank" rel="noopener noreferrer">模型注册表 ↗</a><a href="https://sebastianraschka.com/llm-architecture-gallery/" target="_blank" rel="noopener noreferrer">排版参考 ↗</a><a href="README.md">资料与复用说明 →</a></div></div><div class="about-side"><span class="mini-kicker">CONTENT NOTES</span><div><b>01</b><span>论文先行</span><p>先核对 arXiv 资料，再绘制对应架构。</p></div><div><b>02</b><span>合并重复</span><p>相同主干的不同规模和训练变体共用一张图。</p></div><div><b>03</b><span>保留空缺</span><p>没有对应论文的模型不臆造架构。</p></div></div></section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>MLIP / ARCH GALLERY</span><span>Matbench Discovery snapshot · 2026-10-03</span><a href="#top">返回顶部 ↑</a></div></footer>
+
+  <dialog id="image-dialog" aria-label="架构图预览"><div class="dialog-top"><div><span id="dialog-family"></span><h2 id="dialog-title"></h2></div><button id="dialog-close" type="button" aria-label="关闭预览">×</button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><div class="dialog-bottom"><p id="dialog-summary"></p><a id="dialog-original" target="_blank" rel="noopener noreferrer">打开原始图片 ↗</a></div></dialog>
+</body>
+</html>

@@ -8,6 +8,10 @@
 
 Index of benchmark studies, benchmark datasets, evaluation frameworks, and reliability studies for machine-learning interatomic potentials (MLIPs).
 
+## Architecture gallery
+
+[Explore the MLIP Architecture Gallery](mlip-arch-gallery/) — 53 Matbench Discovery model entries and 31 paper-grounded architecture diagrams, with source links, filtering, and a complete model index.
+
 ## Database
 
 - **Records:** 133
@@ -21,6 +25,7 @@ Index of benchmark studies, benchmark datasets, evaluation frameworks, and relia
 
 ## Contents
 
+- [Architecture gallery](#architecture-gallery)
 - [Benchmark map](#benchmark-map)
 - [Core benchmark resources](#core-benchmark-resources)
 - [Supporting resources](#supporting-resources)
