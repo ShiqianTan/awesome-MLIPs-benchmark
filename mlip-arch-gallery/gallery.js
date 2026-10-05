@@ -1,6 +1,6 @@
 (() => {
   const { figures, models } = window.GALLERY_DATA;
-  const familyNames = ['全部', '等变网络', 'Transformer', '图网络', '优化流程'];
+  const familyNames = ['全部', '等变网络', 'Transformer', '图网络', '传统 ML', '优化流程'];
   const modelByFigure = new Map(figures.map(fig => [fig.file.split('/').pop(), []]));
   models.forEach(model => { if (model.image) modelByFigure.get(model.image).push(model); });
 
@@ -13,7 +13,15 @@
 
   const normalize = value => String(value || '').toLocaleLowerCase();
   const paperURL = value => value.startsWith('https://') ? value : `https://arxiv.org/abs/${value}`;
-  const paperLabel = value => value.startsWith('https://') ? '技术报告' : `arXiv:${value}`;
+  const paperLabel = value => {
+    if (!value.startsWith('https://')) return `arXiv:${value}`;
+    if (value.includes('kairosmaterials')) return '技术报告';
+    if (value.includes('nature.com')) return 'Nature';
+    if (value.includes('10.1103')) return 'Phys. Rev. B';
+    if (value.includes('10.26434')) return 'ChemRxiv';
+    if (value.includes('10.21203')) return 'Research Square';
+    return '论文';
+  };
   const allFigureInfo = new Map(figures.map(fig => [fig.file.split('/').pop(), fig]));
 
   function text(tag, className, content) {

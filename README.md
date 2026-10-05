@@ -10,7 +10,7 @@ Index of benchmark studies, benchmark datasets, evaluation frameworks, and relia
 
 ## Architecture gallery
 
-[Explore the MLIP Architecture Gallery](mlip-arch-gallery/) — 53 Matbench Discovery model entries and 31 paper-grounded architecture diagrams, with source links, filtering, and a complete model index.
+[Explore the MLIP Architecture Gallery](mlip-arch-gallery/) — 53 Matbench Discovery model entries and 35 paper-grounded architecture diagrams, with source links, filtering, and a complete model index.
 
 ## Database
 
